@@ -1,21 +1,8 @@
 <app-navbar></app-navbar>
 <div class="container">
     <div class="row">
-        <div class="sm-col-12">
-            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                <ngb-panel title="TheTitle">
-                    <ng-template ngbPanelContent>
-                        Content1
-                    </ng-template>
-                </ngb-panel>
-                <ngb-panel title="Title2">
-                    <ng-template ngbPanelContent>
-                        Content2
-                    </ng-template>
-                </ngb-panel>
-            </ngb-accordion>
-            <button type="button" class="btn btn-default|primary|success|info|warning|danger" (click)="onClick($event)">
-    Button
-</button> </div>
+        <div class="lg-col-12">
+          <app-politician-page></app-politician-page>
+           </div>
     </div>
 </div>
