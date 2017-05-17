@@ -1,28 +1,32 @@
 <div class="container">
-
   <!--Politician profile card-->
-  <div class="row">
+  <div class="row equal">
 
     <!--Politician image-->
-    <div class="col-2">
-      <img [src]="Politician.bild_url_192">
+    <div class="col-4">
+      <img [src]="Politician.bild_url_192" class="img-fluid" alt="">
     </div>
 
     <!--Politician general info-->
-    <div class="col-5">
-      <h1>{{Politician.sorteringsnamn}}</h1>
-      <h3>{{Politician.status}}</h3>
-      <h3>{{Politician.valkrets}}</h3>
-      <h3>{{Politician.parti}}</h3>
+    <div class="col-8">
+
+      <div class="row">
+        <div class="col">
+          <h1>{{Politician.tilltalsnamn}} {{Politician.efternamn}}</h1>
+          <h3>{{Politician.status}}</h3>
+          <h3>{{Politician.parti}}</h3>
+        </div>
+      </div>
+
+    <div class="row">
+      <!--Politician contact info-->
+      <div class="col">
+        <h5>Email:{{Politician.email}}</h5>
+        <h5>Website:{{Politician.website}}</h5>
+        <h5>Twitter:{{Politician.twitter}}</h5>
+        <h5>Facebook:{{Politician.facebook}}</h5>
+      </div>
     </div>
 
-    <!--Politician contact info-->
-    <div class="col-5">
-      <h4>Contact</h4>
-      <h5>Email:{{Politician.email}}</h5>
-      <h5>Website:{{Politician.website}}</h5>
-      <h5>Twitter:{{Politician.twitter}}</h5>
-      <h5>Facebook:{{Politician.facebook}}</h5>
-    </div>
   </div>
 </div>
