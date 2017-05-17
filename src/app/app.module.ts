@@ -7,6 +7,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PoliticianPageComponent } from './politician-page/politician-page.component';
+import { PoliticianFetcherService } from './politician-fetcher.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PoliticianPageComponent } from './politician-page/politician-page.compo
     HttpModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [PoliticianFetcherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

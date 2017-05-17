@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PoliticianFetcherService } from '../politician-fetcher.service';
 
 @Component({
   selector: 'app-politician-page',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./politician-page.component.css']
 })
 export class PoliticianPageComponent implements OnInit {
-
-  constructor() { }
+  Politician = {};
+  constructor(private politicianFetcherService: PoliticianFetcherService) { 
+  }
 
   ngOnInit() {
+    this.Politician = this.politicianFetcherService.getPolitician();
   }
+  
 
 }
