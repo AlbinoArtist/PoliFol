@@ -1,7 +1,35 @@
-$font-stack: Helvetica;
-$font-color: red;
+@import '../../assets/scss/colors';
+@import '../../assets/scss/measurements';
+
+$header-text-spacing: 2px;
+$subheader-text-spacing: 1px;
 
 h1 {
-    font: $font-stack;
     color: $font-color;
+    letter-spacing: $header-text-spacing;
+}
+h2,h3{
+    letter-spacing: $subheader-text-spacing;
+}
+.politician-info{
+    ul{
+        list-style-type: none;
+        li > strong{
+            width: 80px;
+            color: $liberalerna;
+            margin-right: 10px;
+            float: left;
+        
+        }
+    }
+    
+}
+.politician-links{
+    background-color: $liberalerna;
+    padding: $small-padding;
+    a{
+        padding: $small-padding;
+        margin: $small-icon-margin;
+        color: #FFF;
+    }
 }
