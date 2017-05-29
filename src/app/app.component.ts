@@ -1,22 +1,9 @@
-import { Component } from '@angular/core';
-import { PoliticianFetcherService } from './politician-fetcher.service';
+import { Component } from '@angular/core'
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [PoliticianFetcherService]
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'app works!';
-  test = 'test';
-  politicians = {};
-
-  constructor(private fetcher: PoliticianFetcherService) {  }
-
-  ngOnInit() {
-    this.fetcher.getAllPoliticians()
-      .subscribe( data => this.politicians = data);
-  }
-}
+export class AppComponent { }

@@ -1,3 +1,5 @@
-<p>
-  politicians-dropdown works!
-</p>
+<select>
+    <option *ngFor="let p of politicians">
+        {{p.efternamn}}, {{p.tilltalsnamn}}
+    </option>
+</select>
