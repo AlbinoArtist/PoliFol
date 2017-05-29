@@ -10,6 +10,7 @@ import { PoliticianFetcherService } from '../politician-fetcher.service';
 export class PoliticiansDropdownComponent implements OnInit {
 
   politicians = {};
+  selectedValue = null;
 
   constructor(private fetcher: PoliticianFetcherService) {  }
 

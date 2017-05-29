@@ -1,4 +1,4 @@
-<select>
+<select [(ngModel)]="selectedValue">
     <option *ngFor="let p of politicians">
         {{p.efternamn}}, {{p.tilltalsnamn}}
     </option>
