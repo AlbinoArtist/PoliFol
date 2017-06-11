@@ -20,7 +20,16 @@ export class PoliticianFetcherService {
     
     return this.http.get(url)
       .map(response => response.json())
-      .map(response => response.personlista.person);
+      .map(response => response.personlista.person)
+      .map(response => response.sort(this.sortPoliticians))
+  }
+
+  private sortPoliticians(p1, p2) {
+    if(p1.efternamn > p2.efternamn) return 1;
+    if(p2.efternamn > p1.efternamn) return -1;
+    if(p1.tilltalsnamn > p2.tilltalsnamn) return 1;
+    if(p2.tilltalsnamn > p1.tilltalsnamn) return -1;
+    return 0;
   }
 
 }
