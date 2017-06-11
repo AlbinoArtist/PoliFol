@@ -6,12 +6,15 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class PoliticianFetcherService {
 
-  constructor(private http: Http) { }
+  currentPolitician;
 
-  //Returns a specific politicians based on their intressent_id.
-  getPolitician(){
-    //Currently return mock data from the file './mock-politician'
-    return POLITICIAN;
+  constructor(private http: Http) {
+    this.currentPolitician = POLITICIAN;
+  }
+
+  choosePolitician(politician) {
+    this.currentPolitician = politician;
+    console.log(politician);
   }
 
   //Returns all currently active politicians.
