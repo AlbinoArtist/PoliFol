@@ -9,14 +9,18 @@ import { PoliticianFetcherService } from '../politician-fetcher.service';
 })
 export class PoliticiansDropdownComponent implements OnInit {
 
-  politicians = {};
-  selectedValue = null;
+  politicians = [];
+  selectedPolitician;
 
   constructor(private fetcher: PoliticianFetcherService) {  }
 
   ngOnInit() {
     this.fetcher.getAllPoliticians()
       .subscribe( data => this.politicians = data);
+  }
+
+  onSelectedPolitician(){
+    this.fetcher.choosePolitician(this.selectedPolitician);
   }
 
 }

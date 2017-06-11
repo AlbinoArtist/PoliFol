@@ -1,5 +1,5 @@
-<select [(ngModel)]="selectedValue">
-    <option *ngFor="let p of politicians">
+<select [(ngModel)]="selectedPolitician" (change)="onSelectedPolitician()">
+    <option *ngFor="let p of politicians" [ngValue]="p">
         {{p.efternamn}}, {{p.tilltalsnamn}}
     </option>
 </select>
