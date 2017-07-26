@@ -1,0 +1,10 @@
+<div class="politician-dropdown form-group">
+
+    <label>Select a politician</label>
+
+    <select class="form-control" [(ngModel)]="selectedPolitician" (change)="onSelectedPolitician()">
+        <option *ngFor="let p of politicians" [ngValue]="p">
+            {{p.efternamn}}, {{p.tilltalsnamn}}
+        </option>
+    </select>
+</div>

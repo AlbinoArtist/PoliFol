@@ -4,16 +4,17 @@ import { PoliticianFetcherService } from '../politician-fetcher.service';
 @Component({
   selector: 'app-politician-page',
   templateUrl: './politician-page.component.html',
-  styleUrls: ['./politician-page.component.scss']
+  styleUrls: ['./politician-page.component.scss'],
+  providers: [PoliticianFetcherService]
 })
 export class PoliticianPageComponent implements OnInit {
-  Politician = {};
+  Politician;
   constructor(private politicianFetcherService: PoliticianFetcherService) { 
   }
 
   ngOnInit() {
-    this.Politician = this.politicianFetcherService.getPolitician();
+    this.Politician = this.politicianFetcherService.currentPolitician;
   }
-  
+
 
 }

@@ -1,0 +1,10 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/measurements';
+
+.politician-dropdown label{
+    color: $font-color;
+}
+
+.politician-dropdown {
+    padding: $small-padding;
+}

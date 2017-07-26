@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PoliticianPageComponent } from './politician-page/politician-page.component';
 import { PoliticianFetcherService } from './politician-fetcher.service';
+import { PoliticiansDropdownComponent } from './politicians-dropdown/politicians-dropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PoliticianPageComponent
+    PoliticianPageComponent,
+    PoliticiansDropdownComponent
   ],
   imports: [
     BrowserModule,
